@@ -24,7 +24,7 @@ import deadline.swiperecyclerview.footerView.SimpleFooterView;
 /**
  * @auther deadline
  * @time   2016/10/22
- * SwipeRefreshLayout + recyclerView
+ * 包装整合 --- >  SwipeRefreshLayout + recyclerView
  */
 public class SwipeRecyclerView extends FrameLayout
                 implements SwipeRefreshLayout.OnRefreshListener{
@@ -68,9 +68,11 @@ public class SwipeRecyclerView extends FrameLayout
         isLoadMoreEnable = true;
 
         mFootView = new SimpleFooterView(getContext());
-
+        //加载layout布局
         View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_swipe_recyclerview, this);
+       //加载自定义layout
         mRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.SwipeRefreshLayout);
+        //加载android.support.v7.widget.RecyclerView
         recyclerView = (RecyclerView) view.findViewById(R.id.RecyclerView);
         mLayoutManager = recyclerView.getLayoutManager();
 

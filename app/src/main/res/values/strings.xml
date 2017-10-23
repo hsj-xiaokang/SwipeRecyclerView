@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SwipeRecyclerView</string>
+    <string name="app_nhmd">no have more data!</string>
+    <string name="app_thae">there have a error!</string>
+    <string name="app_ne">net error!</string>
+    <string name="app_apple">Apple</string>
+    <string name="app_banana">Banana</string>
+    <string name="app_orange">Orange</string>
+    <string name="app_watermelon">Watermelon</string>
+    <string name="app_pear">Pear</string>
+    <string name="app_grape">Grape</string>
+    <string name="app_pineapple">Pineapple</string>
+    <string name="app_strawberry">Strawberry</string>
+    <string name="app_cherry">Cherry</string>
+    <string name="app_mango">Mango</string>
 </resources>

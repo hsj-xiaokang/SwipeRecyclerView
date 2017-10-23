@@ -9,6 +9,10 @@ import android.widget.FrameLayout;
  * @time   2016/10/22
  */
 public abstract class BaseFooterView extends FrameLayout implements FooterViewListener{
+    /**
+     * 下面三个构造函数
+     *
+     */
 
     public BaseFooterView(Context context) {
         super(context);

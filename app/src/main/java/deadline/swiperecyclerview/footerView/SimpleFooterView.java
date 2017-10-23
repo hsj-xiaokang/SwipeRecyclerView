@@ -31,22 +31,28 @@ public class SimpleFooterView extends BaseFooterView{
 
     public SimpleFooterView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
-        setLayoutParams(new FrameLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        //参数设置
+        setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        //进度条和文本框
         View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_footer_view, this);
+        //根据id获取
         progressBar = (ProgressBar) view.findViewById(R.id.footer_view_progressbar);
         mText = (TextView) view.findViewById(R.id.footer_view_tv);
     }
 
 
-
+    /**
+     * 展示loading的progressBar
+     */
     @Override
     public void onLoadingMore() {
         progressBar.setVisibility(VISIBLE);
         mText.setVisibility(GONE);
     }
 
+    /**
+     * 展示text
+     */
     public void showText(){
         progressBar.setVisibility(GONE);
         mText.setVisibility(VISIBLE);
@@ -57,18 +63,18 @@ public class SimpleFooterView extends BaseFooterView{
     @Override
     public void onNoMore(CharSequence message) {
         showText();
-        mText.setText("-- the end --");
+        mText.setText(R.string.app_nhmd);
     }
 
     @Override
     public void onError(CharSequence message) {
         showText();
-        mText.setText("啊哦，好像哪里不对劲!");
+        mText.setText(R.string.app_thae);
     }
 
     @Override
     public void onNetChange(boolean isAvailable) {
         showText();
-        mText.setText("网络连接不通畅!");
+        mText.setText(R.string.app_ne);
     }
 }
